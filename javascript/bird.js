@@ -2,7 +2,6 @@ function Bird() {
     this.y = height / 2;
     this.x = 80;
     this.size = 40
-    this.gravity = 0.7
     this.velocity = 0
     this.lift = -18
 
@@ -12,7 +11,7 @@ function Bird() {
     }
 
     this.update = function() {
-        this.velocity += this.gravity
+        this.velocity += gravity
         this.velocity *= windResistance
         this.y += this.velocity;
         if (this.y >= height) this.y = height
