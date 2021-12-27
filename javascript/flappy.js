@@ -1,15 +1,37 @@
 console.log("hello flappy");
 
+var body = document.querySelector("body")
 var bird;
 var pipes = []
-var h = 800
-var w = 800
+var h = getHeight()
+var w = getWidth()
+console.log(w, h);
 var windResistance = 0.9
 var gravity = 0.8
 var interval = 80
 var speed = 5
 var space = 200
 var range = 150
+var score = 0
+var scoreBoard = document.getElementById("score")
+
+function getHeight() {
+    var height = parseFloat(window.getComputedStyle(body).height)
+    console.log(height);
+    if (height < 800) {
+        return height
+    }
+    return 800
+}
+
+function getWidth() {
+    var width = parseFloat(window.getComputedStyle(body).width)
+    console.log(width);
+    if (width < 900) {
+        return width
+    }
+    return 800
+}
 
 function setup() {
     createCanvas(w, h)
@@ -30,10 +52,16 @@ function draw() {
         pipes[i].update()
         pipes[i].show()
     }
+    score++
+    if (frameCount % 20 === 0) scoreBoard.innerHTML = score
 }
 
 function keyPressed() {
     if (key === " ") {
         bird.flap()
     }
+}
+
+function mousePressed() {
+    bird.flap()
 }

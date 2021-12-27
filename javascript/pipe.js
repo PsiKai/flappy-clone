@@ -17,6 +17,7 @@ function Pipe() {
     this.hits = function(bird) {
         if (bird.y < this.top || bird.y > this.bottom) {
             if (bird.x > this.x && bird.x < this.x + 40) {
+                score -= 20
                 return true
             }
             else return false
