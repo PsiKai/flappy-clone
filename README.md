@@ -8,3 +8,6 @@ Use the spacebar or mouse click to make the bird fly upwards.  Gravity is consta
 - Basic physics engine for flying and falling
 - Collision detecting
 - Score keeping
+
+#### Hosting
+Live on github pages at <https://psikai.github.io/flappy-clone/>
