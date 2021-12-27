@@ -5,10 +5,11 @@ var pipes = []
 var h = 800
 var w = 800
 var windResistance = 0.9
-var gravity = 0.7
+var gravity = 0.8
 var interval = 80
 var speed = 5
-var space = 150
+var space = 200
+var range = 150
 
 function setup() {
     createCanvas(w, h)

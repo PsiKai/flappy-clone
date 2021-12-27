@@ -1,5 +1,5 @@
 function Pipe() {
-    this.top = random(10, h - space + 10)
+    this.top = random(range, h - space + 10 - range)
     this.bottom = this.top + space
     this.x = w
     this.highlight = false

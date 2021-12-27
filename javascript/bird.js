@@ -3,7 +3,7 @@ function Bird() {
     this.x = 80;
     this.size = 40
     this.velocity = 0
-    this.lift = -18
+    this.lift = -20
 
     this.show = function() {
         fill(255, 0, 0)
