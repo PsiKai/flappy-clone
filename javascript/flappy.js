@@ -1,5 +1,6 @@
 var bird;
 var pipes = []
+var clouds = []
 
 var h = getHeight()
 var w = getWidth()
@@ -20,6 +21,9 @@ function setup() {
     createCanvas(w, h)
     bird = new Bird()
     pipes.push(new Pipe())
+    for (i = 0; i < 4; i++) {
+        clouds.push(new Cloud(i))
+    }
 }
 
 function draw() {
@@ -27,6 +31,11 @@ function draw() {
         pipes.push(new Pipe())
     }
     background(135, 206, 235)
+
+    for (i = 0; i < clouds.length; i++) {
+        clouds[i].update()
+        clouds[i].show()
+    }
     bird.show()
     bird.update()
     for (i = pipes.length - 1; i >= 0; i--) {
