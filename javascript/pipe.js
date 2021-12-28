@@ -17,12 +17,12 @@ function Pipe() {
     this.hits = function(bird) {
 
         if (bird.x + bird.size / 2 > this.x && bird.x - bird.size / 2 < this.x + 40) {
-            if ((((this.x - bird.x) ** 2) + ((this.top - bird.y) ** 2) <= (bird.size / 2) ** 2) || 
-                    (((this.x + 40) - bird.x) ** 2 + (this.top - bird.y) ** 2 <= (bird.size / 2) ** 2)) {
+            if (((this.x - bird.x) ** 2 + (this.top - bird.y) ** 2 <= (bird.size / 2) ** 2) || 
+                    ((this.x + 40 - bird.x) ** 2 + (this.top - bird.y) ** 2 <= (bird.size / 2) ** 2)) {
                 score -= 20
                 return true
-             } else if ((((this.x - bird.x) ** 2) + ((this.bottom - bird.y) ** 2) <= (bird.size / 2) ** 2) || 
-                    (((this.x + 40) - bird.x) ** 2 + (this.bottom - bird.y) ** 2 <= (bird.size / 2) ** 2)) {
+            } else if (((this.x - bird.x) ** 2 + (this.bottom - bird.y) ** 2 <= (bird.size / 2) ** 2) || 
+                    ((this.x + 40 - bird.x) ** 2 + (this.bottom - bird.y) ** 2 <= (bird.size / 2) ** 2)) {
                 score -= 20
                 return true
             } else if (!(bird.y + bird.size / 2 >= this.top && bird.y + bird.size / 2 <= this.bottom)) {
