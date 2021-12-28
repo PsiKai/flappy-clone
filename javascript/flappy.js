@@ -1,5 +1,6 @@
 var bird;
 var pipes = []
+var clouds = []
 
 var h = getHeight()
 var w = getWidth()
@@ -11,7 +12,7 @@ var gravity = 0.8
 var interval = 80  // smaller number = more pipes on screen
 var speed = 7  // larger number = faster pipes
 var space = 200  // smaller number = smaller opening in pipes
-var range = 150  // smaller number = wider pipe opening positions
+var range = 30  // smaller number = wider pipe opening positions
 
 var score = 0
 var scoreBoard = document.getElementById("score")
@@ -20,6 +21,9 @@ function setup() {
     createCanvas(w, h)
     bird = new Bird()
     pipes.push(new Pipe())
+    for (i = 0; i < 4; i++) {
+        clouds.push(new Cloud(i))
+    }
 }
 
 function draw() {
@@ -27,6 +31,11 @@ function draw() {
         pipes.push(new Pipe())
     }
     background(135, 206, 235)
+
+    for (i = 0; i < clouds.length; i++) {
+        clouds[i].update()
+        clouds[i].show()
+    }
     bird.show()
     bird.update()
     for (i = pipes.length - 1; i >= 0; i--) {

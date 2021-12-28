@@ -5,7 +5,12 @@ function Pipe() {
     this.highlight = false
 
     this.show = function() {
+        fill('rgba(100, 100, 100, 0.5)')
+        noStroke()
+        rect(this.x + 10, 0, 40, this.top + 7)
+        rect(this.x + 10, this.bottom + 7, 40, h - this.bottom)
         this.highlight ? fill(255, 0, 0) : fill(0, 255, 50)
+        stroke(0)
         rect(this.x, 0, 40, this.top)
         rect(this.x, this.bottom, 40, h - this.bottom)
     }

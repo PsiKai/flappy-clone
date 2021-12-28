@@ -6,7 +6,11 @@ function Bird() {
     this.lift = -20
 
     this.show = function() {
+        fill('rgba(100, 100, 100, 0.5)')
+        noStroke()
+        ellipse(this.x + 3, this.y + 5, this.size)
         fill(255, 200, 0)
+        stroke(0)
         ellipse(this.x, this.y, this.size);
     }
 

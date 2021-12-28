@@ -17,6 +17,10 @@ h2, h1 {
     font-family: "Bubblegum Sans";
 }
 
+#score {
+    margin-left: 1rem;
+}
+
 @media (max-width: 901px) {
     h1 {
         position: absolute;
