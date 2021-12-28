@@ -11,7 +11,7 @@ var gravity = 0.8
 var interval = 80  // smaller number = more pipes on screen
 var speed = 7  // larger number = faster pipes
 var space = 200  // smaller number = smaller opening in pipes
-var range = 150  // smaller number = wider pipe opening positions
+var range = 30  // smaller number = wider pipe opening positions
 
 var score = 0
 var scoreBoard = document.getElementById("score")
