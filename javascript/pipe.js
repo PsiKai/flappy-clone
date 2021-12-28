@@ -5,7 +5,7 @@ function Pipe() {
     this.highlight = false
 
     this.show = function() {
-        this.highlight ? fill(255, 0, 0) : fill(255)
+        this.highlight ? fill(255, 0, 0) : fill(0, 255, 50)
         rect(this.x, 0, 40, this.top)
         rect(this.x, this.bottom, 40, h - this.bottom)
     }

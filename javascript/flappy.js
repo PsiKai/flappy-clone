@@ -26,7 +26,7 @@ function draw() {
     if (frameCount % interval === 0) {
         pipes.push(new Pipe())
     }
-    background(100)
+    background(135, 206, 235)
     bird.show()
     bird.update()
     for (i = pipes.length - 1; i >= 0; i--) {
