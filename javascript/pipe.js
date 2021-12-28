@@ -15,12 +15,36 @@ function Pipe() {
     }
 
     this.hits = function(bird) {
-        if (bird.y < this.top || bird.y > this.bottom) {
-            if (bird.x > this.x && bird.x < this.x + 40) {
+
+        if (bird.x + bird.size / 2 > this.x && bird.x - bird.size / 2 < this.x + 40) {
+            if ((((this.x - bird.x) ** 2) + ((this.top - bird.y) ** 2) <= (bird.size / 2) ** 2) || 
+                    (((this.x + 40) - bird.x) ** 2 + (this.top - bird.y) ** 2 <= (bird.size / 2) ** 2)) {
+                console.log("Colliding")
+                score -= 20
+                return true
+             } else if ((((this.x - bird.x) ** 2) + ((this.bottom - bird.y) ** 2) <= (bird.size / 2) ** 2) || 
+                    (((this.x + 40) - bird.x) ** 2 + (this.bottom - bird.y) ** 2 <= (bird.size / 2) ** 2)) {
+                console.log("Colliding")
+                score -= 20
+                return true
+            } else if (!(bird.y + bird.size / 2 >= this.top && bird.y + bird.size / 2 <= this.bottom)) {
+                console.log("Colliding")
                 score -= 20
                 return true
             }
-            else return false
-        }
+        } else return false
+
+
+
+
+
+
+        // if (bird.y < this.top || bird.y > this.bottom) {
+        //     if (bird.x > this.x && bird.x < this.x + 40) {
+        //         score -= 20
+        //         return true
+        //     }
+        //     else return false
+        // }
     }
 }
