@@ -9,7 +9,7 @@ var gravity = 0.8
 
 // Game Difficulty Settings
 var interval = 80  // smaller number = more pipes on screen
-var speed = 5  // larger number = faster pipes
+var speed = 7  // larger number = faster pipes
 var space = 200  // smaller number = smaller opening in pipes
 var range = 150  // smaller number = wider pipe opening positions
 

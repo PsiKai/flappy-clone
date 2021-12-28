@@ -14,8 +14,8 @@ function Bird() {
         this.velocity += gravity
         this.velocity *= windResistance
         this.y += this.velocity;
-        if (this.y >= height) this.y = height
-        if (this.y <= 0) this.y = 0;
+        if (this.y + this.size / 2 >= height) this.y = height - this.size / 2
+        if (this.y - this.size / 2 <= 0) this.y = 0 + this.size / 2;
     }
 
     this.flap = function() {
